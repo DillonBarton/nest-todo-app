@@ -32,13 +32,35 @@
 $ npm install
 ```
 
+```text
+For a development environment copy dev environment variables into a .env.development file in the root of the project
+
+POSTGRES_DB=todo-app-db
+POSTGRES_USER=todo-app
+POSTGRES_PASSWORD=randomSecurePassword
+POSTGRES_ROOT_PASSWORD=randomRootPassword
+POSTGRES_PORT=5432
+POSTGRES_HOST=127.0.0.1
+NODE_ENV=DEVELOPMENT
+PORT=8080
+```
+```text
+For a production environment copy prod environment variables into a .env.production file in the root of the project
+
+POSTGRES_DB=todo-app-db
+POSTGRES_USER=todo-app
+POSTGRES_PASSWORD=randomSecurePassword
+POSTGRES_ROOT_PASSWORD=randomRootPassword
+POSTGRES_PORT=5432
+POSTGRES_HOST=database
+NODE_ENV=PRODUCTION
+PORT=8080
+```
+
 ## Compile and run the project
 
 ```bash
-# development
-$ npm run start
-
-# watch mode
+# development watch mode
 $ npm run start:dev
 
 # production mode

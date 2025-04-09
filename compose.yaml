@@ -2,7 +2,7 @@ version: "3.9"
 
 services:
   app:
-    env_file: .env
+    env_file: .env.production
     build:
       context: .
       dockerfile: Dockerfile
@@ -11,7 +11,7 @@ services:
     ports:
       - "8080:8080"
   database:
-    env_file: .env
+    env_file: .env.production
     image: postgres
     ports:
       - "5432:5432"

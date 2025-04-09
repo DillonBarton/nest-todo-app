@@ -7,6 +7,8 @@ RUN npm install
 COPY . .
 RUN chown -R todo-app:todo-app /app
 USER todo-app
+RUN npm run build
+RUN export NODE_ENV=PRODUCTION
 EXPOSE 8080
 
-CMD ["npm", "run", "start"]
+CMD ["npm", "run", "start:prod"]
